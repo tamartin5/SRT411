@@ -1,0 +1,140 @@
+---
+title: "Assignment0_ThierryMartin"
+author: "Thierry Martin"
+date: "January 31, 2017"
+output: html_document
+---
+
+##### ToDo 1:
+
+Result:
+`r ((2017-2015)/(2017-1997))*100`
+
+Comment: r must be used before every r code to make it function correctly in R Markdown.
+#### ToDo 2:
+
+Result:
+`r ToDo2= ((2017-2015)/(2017-1997))*100
+ToDo2`
+
+#### ToDo 3:
+
+Result:
+`r sum(4,5,8,11)`
+
+#### ToDo 4:
+
+Result:
+```{r, out.width = '\\maxwidth'}
+plot(rnorm(100))
+```
+
+Comment: To make the plot display using R Markdown you need to add {r} before the plot code, you can even add the desired with and things of that order to make the plot display the way you desire. 
+
+#### ToDo 5:
+
+Result:
+`r help(sqrt)`
+
+#### ToDo 6:
+
+Result:
+r lapply(1:10, function(n)source("firstscript.R")$value)
+
+```{r, out.width = '\\maxwidth'}
+plot(rnorm(100))
+```
+
+Comment: This scrip must exits and R needs to have access to the script for it to run, therefore I made the appropriate r code, but the code is only displayed, it is not the actual running code. 
+
+#### ToDo 7:
+
+Result:
+`r P = seq(from=31, to=60, by=1)
+Q= matrix(P,ncol = 5, nrow = 6)
+P`
+
+Comment: I am having trouble displaying the Q matrix in R Markdown, however the code to create Q is in the R Markdown document, Q= matrix(P,ncol = 5, nrow = 6). I can make this work in the Console however by simply entering Q. 
+
+#### ToDo 8:
+
+Result:
+```{r, out.width = '\\maxwidth'}
+x1=seq(from=1, to=100, by=1)
+x2=seq(from=101, to=200, by=1)
+x3=seq(from=201, to=300, by=1)
+t= data.frame(a=x1,b=x1+x2,c=x1+x2+x3)
+plot(t)
+```
+
+#### ToDo 9:
+
+Result:
+```{r, out.width = '\\maxwidth'}
+plot(t$a, type="l", ylim=range(t),lwd=3, col=rgb(1,0,0,0.3))
+lines(t$b, type="s", lwd=2,col=rgb(0.3,0.4,0.3,0.9))
+points(t$c, pch=20, cex=4,col=rgb(0,0,1,0.3))
+```
+
+#### ToDo 10:
+
+Result:
+`r sqrt(mean(rnorm(100)))`
+
+Comment: It is possible to receive NaNs or an error because of the NaNs result, it is produced when the resulting value is negative, run Knit again in R Markdown t'ill you receive a result.
+
+#### ToDo 11:
+
+Result:
+`r d = data.frame(g = c(3,4,5),h = c(12,43,54))
+write.table(d, file="tst1.txt", row.names=FALSE)
+d2 = read.table(file="tst1.txt",header=TRUE)
+d2$g*5`
+
+#### ToDo 12:
+
+r 
+date1=strptime( c("20170131","20170303"),format="%Y%m%d")
+present=c(0,1)
+date1
+
+Comment: This code is simply displayed, it works in the Console, but I cant seem to make it work in R Markdown.
+
+#### ToDo 13
+
+Result:
+
+`r 
+
+vector=seq(from=1, to=100, by=1)
+s=c()
+for(i in 1:100)
+{
+  if(vector[i]<5)
+  {
+    s[i]=vector[i]*5;
+  }
+  else if(vector[i]>90)
+  {
+    s[i]=vector[i]*10;
+  }
+  else
+  {
+    s[i]=vector[i]*0.1;
+  }
+}
+s`
+
+#### ToDo 14:
+
+`r
+
+fun= function(arg1,arg2 )
+{
+  vector[i]=arg1[i];
+  for(i in length(vector))
+  {
+    
+  }
+}
+`
